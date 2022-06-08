@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        text, span, p, button {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+            alignment-baseline: middle;
+            text-anchor: middle;
+            fill: white;
+        }
+        button,p {
+            font-size: 10pt;
+        }
+        .container {
+            position: absolute;
+        }
+        .form {
+            width: 190px;
+            padding: 10px;
+            position: absolute;
+            top: 0px;
+        }
+        #svg {
+            border: solid 1px lightgray;
+            position: absolute;
+            left: 240px;
+        }
+        span {
+            font-size: 10pt;
+        }
+        line {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form"><form>
+        <button id="applyLayout" type="button" style="background: hsl(100,100%,80%)">Apply Layout</button>
+        <button id="reset" type="button" style="background: hsl(60,100%,80%)">Reset</button></p>
+        <p>Graph Settings:<br>
+            <input type="checkbox" id="show_lines" checked>Show Link Lines<br>
+            <input type="checkbox" id="allow_zoom" checked>Allow Zoom<br>
+            <input type="checkbox" id="allow_drag">Allow Drag<br>
+            Label Attr: <select id="label_attr_name">
+                <option value="id">id</option>
+                <option value="name">name</option>
+            </select><br>
+            Label Size:<input type="number" value="10" min="0" max="40" id="label_size">
+            
+        </p>
+        <p>Layout Settings:<br>
+            Node Distance: <br>
+            X:<input type="number" value="40" min="0" max="1000" id="n2n_x">
+            Y:<input type="number" value="40" min="0" max="1000" id="n2n_y"><br>
+            Sort Node: <select id="sort_node">
+                <option value="Default">Default</option>
+                <option value="ascending">Ascending</option>
+                <option value="descending">Descending</option>
+            </select><br>
+            Sort Attr: <select id="sort_attr">
+                <option value="Default">Default</option>
+                <option value="id">id</option>
+                <option value="height">height</option>
+                <option value="width">width</option>
+                <option value="priority">priority</option>
+            </select><br>
+            Root Position: <select id="root_node_position">
+                <option value="Default">Default</option>
+                <option value="Center">Center</option>
+                <option value="Median">Median</option>
+            </select><br>
+            Direction: <select id="layout_direction">
+                <option value="TopToBottom">TopToBottom</option>
+                <option value="LeftToRight">LeftToRight</option>
+                <option value="BottomToTop">BottomToTop</option>
+                <option value="RightToLeft">RightToLeft</option>
+            </select><br>
+        </p>
+        
+        <button id="zoomIn" type="button">Zoom in</button>
+        <button id="zoomOut" type="button">Zoom out</button>
+        <button id="resetZoom" type="button">Reset zoom</button>
+        <button id="panLeft" type="button">Pan left</button>
+        <button id="panRight" type="button">Pan right</button>
+        <button id="center" type="button">Center</button>
+    </form></div>
+    <div id="svg" style="width: 800px; height: 600px;"></div>
+</div>
+</body>
+</html>

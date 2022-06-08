@@ -1,0 +1,15 @@
+{
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "modules": false // 设置为false,否则babel会在rollup有机会执行其操作之前导致我们的模块转化为commonjs
+        }
+      ]
+    ]
+  }
+// 我们将 .babelrc 文件放在 src 中，而不是根目录下。 这允许我们对于不同的任务有不同的 
+// .babelrc 配置，比如像测试，如果我们以后需要的话 - 通常为单独的任务单独配置会更好。
+
+// npm install @babel/core @babel/preset-env --save-dev
+  
