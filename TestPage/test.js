@@ -52,6 +52,7 @@ function getHtmlParams(){
 }
 
 function applyLayout(){
+    console.log(treeRowData);
     const root = d3.hierarchy(treeRowData);
     const layoutSetting = getHtmlParams();
     layouter.setNodeDistX(layoutSetting.n2n_x);

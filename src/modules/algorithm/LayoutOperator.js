@@ -20,7 +20,7 @@ class TreeLayout {
   layout(treeData) {
     const tree = this.preLayoutProcess(treeData);
     layout(tree, this.layoutSessionData.rootNodePlacement)
-    this. postLayoutProcess(tree,treeData);
+    this.postLayoutProcess(tree,treeData);
   }
 
   preLayoutProcess(treeData) {
@@ -69,12 +69,13 @@ class TreeLayout {
    * Assign layout tree x, y coordinates back to treeData,
    * with bounding boxes removed.
    */
-  __assignCoordinates(tree, treeData, box) {
+  __assignCoordinates(tree, treeData, box, depth=0) {
     const { x, y } = this.bb.removeBoundingBox(tree.x, tree.y)
     treeData.x = x;
     treeData.y = y;
+    treeData.depth = depth;
     for (let i = 0; i < tree.c.length; i++) {
-      this.__assignCoordinates(tree.c[i], treeData.children[i],box)
+      this.__assignCoordinates(tree.c[i], treeData.children[i],box, depth+1);
     }
     return treeData;
   }
