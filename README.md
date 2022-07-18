@@ -4,7 +4,7 @@ Design an algorithm prototype based on the main ideas of A.J. van der Ploeg's Dr
 
 The main content of this project includes treelayout layout algorithm and rendering. The treelayout algorithm does not rely on any third-party library, and calculates the position of nodes according to different parameters. The render part relies on d3 at the bottom and renders elements based on SVG, which supports dragging and scaling of nodes.
 
-You can go (here)[https://juejin.cn/post/7119033896003436580] for a detailed introduction to the algorithm
+You can go [here](https://juejin.cn/post/7119033896003436580) for a detailed introduction to the algorithm
 
 TreeLayout
 
