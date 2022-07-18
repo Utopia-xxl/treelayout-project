@@ -1,18 +1,20 @@
-# https://juejin.cn/post/6956501799327137828#heading-51
-
 # Overview
 
-本项目主要内容包括treelayout布局算法和渲染两部分，treelayout算法不依赖任何第三方库，根据不同的参数计算节点的位置。render部分底层依赖d3，基于SVG渲染元素，支持节点的拖拽和缩放。
+Design an algorithm prototype based on the main ideas of A.J. van der Ploeg's Drawing Non-layered Tidy Trees in Linear Time paper
+
+The main content of this project includes treelayout layout algorithm and rendering. The treelayout algorithm does not rely on any third-party library, and calculates the position of nodes according to different parameters. The render part relies on d3 at the bottom and renders elements based on SVG, which supports dragging and scaling of nodes.
+
+You can go (here)[https://juejin.cn/post/7119033896003436580] for a detailed introduction to the algorithm
 
 TreeLayout
 
-- 并且支持不同的布局方向：从上到下，从左到右，从右到左，从下到上。
-- 支持BoundingBox，能够为节点之间指定间距
-- 设置所有父节点的位置是相对子节点还是相对所有子树
-- 节点排序：能支持节点根据节点特定的属性升序或者降序
+- Different layout directions are supported: top to bottom, left to right, right to left, bottom to top.
+- Support for BoundingBox, the ability to specify spacing between nodes
+- Set the position of all parent nodes relative to child nodes or relative to all subtrees
+- Node sorting: can support nodes in ascending or descending order based on node-specific attributes
 
 Render
 
-- 可以指定节点的属性显示
-- 设置label的字体大小
-- 支持交互 zoom，drag，pan等。
+- Specify the attribute display of the node
+- Set the font size of the label
+- Support interactive zoom, drag, pan, etc.
